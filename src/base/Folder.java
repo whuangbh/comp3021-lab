@@ -106,7 +106,7 @@ public class Folder implements Comparable<Folder>, java.io.Serializable {
 			boolean satisfied = true;	//set up a flag
 
 			for (int i = 0; i < tokens.length && satisfied != false ; i++) {
-				if (tokens[i+1].equals("OR") || tokens[i+1].equals("or")) { //or relationship
+				if (i+1 != tokens.length && (tokens[i+1].equals("OR") || tokens[i+1].equals("or"))) { //or relationship
 
 					int originalPoisition = i;
 					int arraySize = 1;
